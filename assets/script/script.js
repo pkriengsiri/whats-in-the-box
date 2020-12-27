@@ -2,14 +2,15 @@ $(document).ready(function () {
   // DOM VARIABLES
 
   // JS VARIABLES
-  var userBoxes = [] // Tracks all the boxes the user has packed
+  var userBoxes = []; // Tracks all the boxes the user has packed
 
   // FUNCTION DECLARATIONS
 
   // Handles the behavior once the user clicks the submit button
-  function generateQRCode(e) {
+
+  function generateQRCode() {
     // Prevents default form behavior
-    e.preventDefault();
+    
     // Pulls text fields from form and stores them as variables
     var userName = $("#user-name").val();
     var boxName = $("#box-name").val();
@@ -31,18 +32,30 @@ $(document).ready(function () {
           },
         ],
       },
+
       success: function (response) {
         // Get the paste ID from the submitted paste
-        var pasteID = response.id;
+        pasteID = response.id;
         console.log(pasteID);
+
+        $("#qr-appear-here").empty();
+        $("#qr-appear-here").qrcode
+        ({ text: pasteID,
+          size: 500,
+          value: "Hello", 
+        
+        });
+
       },
     });
   }
 
   // FUNCTION CALLS
-
   // EVENT HANDLERS
   //event listener to save input text into variables
-  $("#print-label").on("click", generateQRCode);
-
+  $("#print-label").on("click", function (e) {
+    e.preventDefault();
+    generateQRCode();
+  
+  });
 });
