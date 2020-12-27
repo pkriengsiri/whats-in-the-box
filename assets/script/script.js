@@ -5,12 +5,27 @@ $(document).ready(function () {
   var userBoxes = []; // Tracks all the boxes the user has packed
 
   // FUNCTION DECLARATIONS
+  // function makeQr (){
+
+  // }
 
   // Handles the behavior once the user clicks the submit button
 
   function generateQRCode() {
-    // Prevents default form behavior
-    
+    var myUrl = new URL("https://pkriengsiri.github.io/whats-in-the-box/");
+    myUrl.searchParams.set("name", "pasteID");
+    var newUrl = myUrl.href;
+    console.log(newUrl);
+    $("#qr-appear-here").empty();
+    new QRCode("qr-appear-here", {
+      text: newUrl,
+      width: 100,
+      height: 100,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H,
+    });
+
     // Pulls text fields from form and stores them as variables
     var userName = $("#user-name").val();
     var boxName = $("#box-name").val();
@@ -35,17 +50,8 @@ $(document).ready(function () {
 
       success: function (response) {
         // Get the paste ID from the submitted paste
-        pasteID = response.id;
+        var pasteID = response.id;
         console.log(pasteID);
-
-        $("#qr-appear-here").empty();
-        $("#qr-appear-here").qrcode
-        ({ text: pasteID,
-          size: 500,
-          value: "Hello", 
-        
-        });
-
       },
     });
   }
@@ -54,8 +60,8 @@ $(document).ready(function () {
   // EVENT HANDLERS
   //event listener to save input text into variables
   $("#print-label").on("click", function (e) {
+    // Prevents default form behavior
     e.preventDefault();
     generateQRCode();
-  
   });
 });
