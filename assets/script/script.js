@@ -34,10 +34,10 @@ $(document).ready(function () {
         // Get the paste ID from the submitted paste
         var pasteID = response.id;
         var htmlLink = "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" + pasteID;
-        $("#print-link").attr("href", "https://api.pdflayer.com/api/convert?access_key=17f010c4c74507d1e12e139705fb8eda&test=1&document_url=" + htmlLink);
+        $("#print-link").attr("href", "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&url=" + htmlLink);
         console.log(pasteID);
         var myUrl = new URL(
-          "https://pkriengsiri.github.io/whats-in-the-box/-scan"
+          "https://pkriengsiri.github.io/whats-in-the-box/scan"
         );
         myUrl.searchParams.set("name", pasteID);
         var newUrl = myUrl.href;
