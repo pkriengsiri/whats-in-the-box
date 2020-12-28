@@ -12,8 +12,8 @@ $(document).ready(function() {
       $("#qr-appear-here").empty();
       new QRCode("qr-code", {
         text: newUrl,
-        width: 400,
-        height: 400,
+        width: 200,
+        height: 200,
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H,
