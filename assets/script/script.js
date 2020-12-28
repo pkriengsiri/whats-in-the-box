@@ -4,27 +4,9 @@ $(document).ready(function () {
   // JS VARIABLES
   var userBoxes = []; // Tracks all the boxes the user has packed
 
-  // FUNCTION DECLARATIONS
-  // function makeQr (){
-
-  // }
-
   // Handles the behavior once the user clicks the submit button
 
   function generateQRCode() {
-    var myUrl = new URL("https://pkriengsiri.github.io/whats-in-the-box/");
-    myUrl.searchParams.set("name", "pasteID");
-    var newUrl = myUrl.href;
-    console.log(newUrl);
-    $("#qr-appear-here").empty();
-    new QRCode("qr-appear-here", {
-      text: newUrl,
-      width: 100,
-      height: 100,
-      colorDark: "#000000",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H,
-    });
 
     // Pulls text fields from form and stores them as variables
     var userName = $("#user-name").val();
@@ -51,7 +33,23 @@ $(document).ready(function () {
       success: function (response) {
         // Get the paste ID from the submitted paste
         var pasteID = response.id;
+        $("#print-link").attr("href", "./Print/index.html?" + pasteID);
         console.log(pasteID);
+        var myUrl = new URL(
+          "https://pkriengsiri.github.io/whats-in-the-box/-scan"
+        );
+        myUrl.searchParams.set("name", pasteID);
+        var newUrl = myUrl.href;
+        console.log(newUrl);
+        $("#modal-body").empty();
+        new QRCode("modal-body", {
+          text: newUrl,
+          width: 100,
+          height: 100,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H,
+        });
       },
     });
   }
@@ -61,7 +59,11 @@ $(document).ready(function () {
   //event listener to save input text into variables
   $("#print-label").on("click", function (e) {
     // Prevents default form behavior
+    $('#myModal').modal('show');
     e.preventDefault();
     generateQRCode();
+    
   });
+
+
 });
