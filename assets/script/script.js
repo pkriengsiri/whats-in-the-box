@@ -33,7 +33,8 @@ $(document).ready(function () {
       success: function (response) {
         // Get the paste ID from the submitted paste
         var pasteID = response.id;
-        $("#print-link").attr("href", "./Print/index.html?" + pasteID);
+        var htmlLink = "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" + pasteID;
+        $("#print-link").attr("href", "http://api.pdflayer.com/api/convert?access_key=17f010c4c74507d1e12e139705fb8eda&test=1&document_url=" + htmlLink);
         console.log(pasteID);
         var myUrl = new URL(
           "https://pkriengsiri.github.io/whats-in-the-box/-scan"
@@ -50,10 +51,25 @@ $(document).ready(function () {
           colorLight: "#ffffff",
           correctLevel: QRCode.CorrectLevel.H,
         });
+        // var apiURL = "http://api.pdflayer.com/api/convert?access_key=17f010c4c74507d1e12e139705fb8eda&test=1&document_url=" + htmlLink;
+        // $.ajax({
+        //   url: apiURL,
+        //   method: "GET"
+        // }).then(function(response) {
+
+        //   console.log(response);
+
+        // })
+        
+        
+
+        
       },
     });
   }
 
+    
+    
   // FUNCTION CALLS
   // EVENT HANDLERS
   //event listener to save input text into variables
@@ -64,6 +80,8 @@ $(document).ready(function () {
     generateQRCode();
     
   });
+
+  
 
 
 });
