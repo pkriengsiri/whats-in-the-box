@@ -30,11 +30,13 @@ $(document).ready(function () {
         ],
       },
 
+      
       success: function (response) {
+       
         // Get the paste ID from the submitted paste
         var pasteID = response.id;
         var htmlLink = "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" + pasteID;
-        $("#print-link").attr("href", "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&url=" + htmlLink);
+        $("#print-link").attr("href", "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&format=Letter&filename=QRLabel&url=" + htmlLink);
         console.log(pasteID);
         var myUrl = new URL(
           "https://pkriengsiri.github.io/whats-in-the-box/scan"
@@ -45,38 +47,27 @@ $(document).ready(function () {
         $("#modal-body").empty();
         new QRCode("modal-body", {
           text: newUrl,
-          width: 100,
-          height: 100,
+          width: 200,
+          height: 200,
           colorDark: "#000000",
           colorLight: "#ffffff",
           correctLevel: QRCode.CorrectLevel.H,
-        });
-        // var apiURL = "http://api.pdflayer.com/api/convert?access_key=17f010c4c74507d1e12e139705fb8eda&test=1&document_url=" + htmlLink;
-        // $.ajax({
-        //   url: apiURL,
-        //   method: "GET"
-        // }).then(function(response) {
-
-        //   console.log(response);
-
-        // })
-        
-        
-
-        
-      },
+        });    
+      }
     });
   }
 
-    
+ 
     
   // FUNCTION CALLS
   // EVENT HANDLERS
   //event listener to save input text into variables
   $("#print-label").on("click", function (e) {
     // Prevents default form behavior
-    $('#myModal').modal('show');
     e.preventDefault();
+    //reveals the Modal with QR code
+    $('#myModal').modal('show');
+    
     generateQRCode();
     
   });
