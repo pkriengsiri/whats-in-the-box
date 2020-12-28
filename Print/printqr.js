@@ -25,7 +25,7 @@ $(document).ready(function() {
             method: "GET",
         }).then(function(response) {
 
-          var boxName = response.description;
+          var boxName = response.paste.description;
           $("#box-name").text(boxName);
         });
 
