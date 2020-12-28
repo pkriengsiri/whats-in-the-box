@@ -34,7 +34,7 @@ $(document).ready(function () {
         // Get the paste ID from the submitted paste
         var pasteID = response.id;
         var htmlLink = "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" + pasteID;
-        $("#print-link").attr("href", "http://api.pdflayer.com/api/convert?access_key=17f010c4c74507d1e12e139705fb8eda&test=1&document_url=" + htmlLink);
+        $("#print-link").attr("href", "https://api.pdflayer.com/api/convert?access_key=17f010c4c74507d1e12e139705fb8eda&test=1&document_url=" + htmlLink);
         console.log(pasteID);
         var myUrl = new URL(
           "https://pkriengsiri.github.io/whats-in-the-box/-scan"
