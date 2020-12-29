@@ -1,7 +1,11 @@
 /* styling goes here */
 body {
-    background-image: url("../images/bubble-wrap.jpg");
+    background-color: rgb(192, 143, 79);
+    font-family: 'Staatliches', cursive;
 }
 .form {
     background-color: rgb(169, 120, 53);
+}
+.fa-box-open {
+    color: rgb(169, 120, 53);
 }
