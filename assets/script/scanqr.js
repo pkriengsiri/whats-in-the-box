@@ -4,7 +4,6 @@ $(document).ready(function() {
 //JS VARIABLES
 var userName = "";
 var boxName = "";
-var boxContents = "";
 var URL = window.location.href;
 var pasteID = "";
 
@@ -23,14 +22,24 @@ function getBoxInfo() {
             url: queryURL,
             method: "GET",
         }).then(function(response) {
-
+          // Get username and box name from paste API JSON  
           boxName = response.paste.description;
           userName = response.paste.sections[0].name;
-          boxContents = response.paste.sections[0].contents;
+          // Get box contents and parse stringified array
+          boxContentsArray = JSON.parse(response.paste.sections[0].contents);
 
+          // Print each element of an array in the box-contents div
+          for(var i=0; i < boxContentsArray.length; i++) {
+              var pEl = $("<p>")
+              pEl.text(boxContentsArray[i]);
+              $("#box-contents").append(pEl);
+              pEl.addClass("mb-0");
+          }
+
+          
+          // Set contents for user name and box name divs
           $("#user-name").text(userName);
           $("#box-name").text(boxName);
-          $("#box-contents").text(boxContents);
         });
 }
 
