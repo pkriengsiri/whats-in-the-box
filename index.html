@@ -41,16 +41,20 @@
     <nav class="navbar navbar-light bg-light">
       <header class="mb-0 h1 mx-auto">What's in the Box? <i class="fas fa-box-open"></i></header>
     </nav>
-    <div class="container">
-      <!-- <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">What is In the Box</h1>
-          <p class="lead"></p>
-        </div>
-      </div> -->
-
+    <div class="container justify-content-center">
+     
+      <!-- top box flap -->
+      <div class="row mt-3">
+        <div class="col-1"></div>
+        <div class="col-md-6 p-5 top-flap"></div>
+        <div class="col-1"></div>
+      </div>
+      
       <div class="row">
-        <div class="col-md-6 mx-auto form">
+        <!-- left box flap -->
+        <div class="col-1 left-flap"></div>
+        <!-- user input -->
+        <div class="col-md-6 lg-shadow form">
           <form>
             <div class="form-group">
               <label for="">User name:</label>
@@ -67,7 +71,7 @@
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label"
-                >Box content</label
+                >Box content:</label
               >
               <textarea
                 class="form-control"
@@ -76,11 +80,12 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" id="print-label">
-              Print QR label
+            <button type="submit" class="btn btn-primary m-2" id="print-label">
+              Make QR Code  <i class="fas fa-qrcode"></i>
             </button>
 
           </form>
+          
           <!-- MODAL -->
           <div
             class="modal fade"
@@ -117,8 +122,18 @@
             </div>
           </div>
         </div>
+        <!-- right box flap -->
+        <div class="col-1 right-flap"></div>
       </div>
-    </div>
+      <!-- bottom box flap -->
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-md-6 p-5 bottom-flap"></div>
+        <div class="col-1"></div>
+      </div>
+  </div>
+
+  
 
     <script src="./assets/script/script.js"></script>
   </body>

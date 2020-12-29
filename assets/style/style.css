@@ -1,11 +1,40 @@
 /* styling goes here */
 body {
-    background-color: rgb(192, 143, 79);
+    /* background-color: rgb(205, 159, 97); */
     font-family: 'Staatliches', cursive;
+    font-size: larger;
 }
 .form {
     background-color: rgb(169, 120, 53);
+    border-style: solid;
+    font-size: x-large;
+
 }
+
 .fa-box-open {
     color: rgb(169, 120, 53);
+}
+.left-flap {
+    background-color: rgb(192, 143, 79);
+    border-left: dashed;
+    border-top: dashed;
+    border-bottom: dashed;
+}
+.right-flap {
+    background-color: rgb(192, 143, 79);
+    border-right: dashed;
+    border-top: dashed;
+    border-bottom: dashed;
+}
+.top-flap {
+    background-color: rgb(192, 143, 79);
+    border-right: dashed;
+    border-top: dashed;
+    border-left: dashed;
+}
+.bottom-flap {
+    background-color: rgb(192, 143, 79);
+    border-right: dashed;
+    border-bottom: dashed;
+    border-left: dashed;
 }
