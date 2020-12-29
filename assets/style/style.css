@@ -1,9 +1,13 @@
 /* styling goes here */
 body {
-    /* background-color: rgb(205, 159, 97); */
+    background-image: url(../images/bubble-wrap.png);
     font-family: 'Staatliches', cursive;
     font-size: larger;
 }
+p {
+    font-size: large;
+}
+
 .form {
     background-color: rgb(169, 120, 53);
     border-style: solid;
