@@ -26,11 +26,20 @@ function getBoxInfo() {
 
           boxName = response.paste.description;
           userName = response.paste.sections[0].name;
-          boxContents = response.paste.sections[0].contents;
+          
+          boxContentsArray = JSON.parse(response.paste.sections[0].contents);
+
+          for(var i=0; i < boxContentsArray.length; i++) {
+              var pEl = $("<p>")
+              pEl.text(boxContentsArray[i]);
+              $("#box-contents").append(pEl);
+              pEl.addClass("mb-0");
+          }
+
+          console.log(boxContents);
 
           $("#user-name").text(userName);
           $("#box-name").text(boxName);
-          $("#box-contents").text(boxContents);
         });
 }
 

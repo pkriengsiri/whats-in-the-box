@@ -22,6 +22,7 @@ $(document).ready(function () {
 
     // Converts the boxContent String to an array with the string split by line breaks
     var boxContentArray = boxContent.split("\n");
+    var boxContentArrayString = JSON.stringify(boxContentArray);
   
 
     // Stores the user name in local storage
@@ -39,7 +40,7 @@ $(document).ready(function () {
           {
             name: userName,
             syntax: "autodetect",
-            contents: boxContentArray,
+            contents: boxContentArrayString,
           },
         ],
       },
