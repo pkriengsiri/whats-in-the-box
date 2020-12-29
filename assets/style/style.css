@@ -4,20 +4,16 @@ body {
     font-family: 'Staatliches', cursive;
     font-size: larger;
 }
-p {
-    font-size: large;
-}
-
 .form {
-    background-color: rgb(169, 120, 53);
+    background-color: rgb(169, 120, 53); 
     border-style: solid;
     font-size: x-large;
-
 }
-
+/* font awesome box icon */
 .fa-box-open {
     color: rgb(169, 120, 53);
 }
+
 .left-flap {
     background-color: rgb(192, 143, 79);
     border-left: dashed;
@@ -29,6 +25,7 @@ p {
     border-right: dashed;
     border-top: dashed;
     border-bottom: dashed;
+    box-shadow: 15px 15px 15px grey;
 }
 .top-flap {
     background-color: rgb(192, 143, 79);
@@ -41,4 +38,29 @@ p {
     border-right: dashed;
     border-bottom: dashed;
     border-left: dashed;
+    box-shadow: 15px 15px 10px grey;
+}
+
+.form-control:focus {
+    border-color: black;
+}
+
+.print-button, .close-button {
+    background-color:rgb(107, 70, 0);
+    border-color:rgb(107, 70, 0);
+    color: white;
+    
+}
+.print-button:hover {
+    background-color:rgb(131, 86, 2);
+    border-color: rgb(107, 70, 0);
+    
+}
+
+ .print-button:active, .btn-lg, .print-button-check:focus{
+    background-color:rgb(131, 86, 2);
+    border-color: rgb(107, 70, 0);
+    outline: none !important;
+   
+    
 }
