@@ -67,10 +67,15 @@ $(document).ready(function () {
     e.preventDefault();
     //reveals the Modal with QR code
     $('#myModal').modal('show');
+   
     
     generateQRCode();
     
   });
+
+  $("#close-button").on("click", function() {
+    location.reload();
+    });
 
   
 
