@@ -4,7 +4,7 @@ $(document).ready(function() {
     var pasteID = link[1];
 
     var myUrl = new URL(
-        "https://pkriengsiri.github.io/whats-in-the-box/scan&"
+        "https://pkriengsiri.github.io/whats-in-the-box/scan"
       );
       myUrl.searchParams.set("name", pasteID);
       var newUrl = myUrl.href;
