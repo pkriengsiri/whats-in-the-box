@@ -20,6 +20,10 @@ $(document).ready(function () {
     var boxName = $("#box-name").val();
     var boxContent = $("#box-content").val();
 
+    // Converts the boxContent String to an array with the string split by line breaks
+    var boxContentArray = boxContent.split("\n");
+  
+
     // Stores the user name in local storage
     localStorage.setItem("user-name", userName);
 
@@ -35,7 +39,7 @@ $(document).ready(function () {
           {
             name: userName,
             syntax: "autodetect",
-            contents: boxContent,
+            contents: boxContentArray,
           },
         ],
       },
