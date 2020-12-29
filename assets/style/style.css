@@ -1,1 +1,7 @@
 /* styling goes here */
+body {
+    background-image: url("../images/bubble-wrap.jpg");
+}
+.form {
+    background-color: rgb(169, 120, 53);
+}
