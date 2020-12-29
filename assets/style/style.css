@@ -1,1 +1,88 @@
-/* styling goes here */
+/* background image, google font */
+body {
+    background-image: url(../images/bubble-wrap.png);
+    font-family: 'Staatliches', cursive;
+    font-size: larger;
+}
+
+.modal-header{
+    background-color: lightgrey;
+    border-bottom: solid;
+}
+.form {
+    background-color: rgb(169, 120, 53); 
+    border-style: solid;
+    font-size: x-large;
+}
+/* font awesome box icon */
+.fa-box-open {
+    color: rgb(169, 120, 53);
+}
+
+/* styles empty containers around form to create box */
+.left-flap {
+    background-color: rgb(192, 143, 79);
+    border-left: dashed;
+    border-top: dashed;
+    border-bottom: dashed;
+}
+.right-flap {
+    background-color: rgb(192, 143, 79);
+    border-right: dashed;
+    border-top: dashed;
+    border-bottom: dashed;
+    box-shadow: 15px 15px 15px grey;
+}
+.top-flap {
+    background-color: rgb(192, 143, 79);
+    border-right: dashed;
+    border-top: dashed;
+    border-left: dashed;
+}
+.bottom-flap {
+    background-color: rgb(192, 143, 79);
+    border-right: dashed;
+    border-bottom: dashed;
+    border-left: dashed;
+    box-shadow: 15px 15px 10px grey;
+}
+
+/* border around form when input is active */
+.form-control:focus {
+    border-color: black;
+}
+
+.generate-button, .print-button {
+    background-color:rgb(107, 70, 0);
+    border-color:rgb(107, 70, 0);
+    color: white;
+    
+}
+.generate-button:hover, .print-button:hover {
+    background-color:rgb(131, 86, 2);
+    border-color: rgb(107, 70, 0);
+    color: white;
+    
+}
+
+ .generate-button:active, .btn-lg, .generate-button-check:focus{
+    background-color:rgb(131, 86, 2);
+    border-color: rgb(107, 70, 0);
+    outline: none !important;
+     
+}
+#close-button {
+    background-color: black;
+}
+
+/* hides box flaps below 768px */
+@media screen and (max-width: 768px) {
+    .top-flap, .bottom-flap, .left-flap, .right-flap {
+      visibility: hidden;
+    }
+
+    .form {
+        border-style: dashed;
+    }
+
+  }

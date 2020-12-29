@@ -87,8 +87,18 @@ $(document).ready(function () {
     // Prevents default form behavior
     e.preventDefault();
     //reveals the Modal with QR code
-    $("#myModal").modal("show");
+
+    $('#myModal').modal('show');
+   
+
 
     generateQRCode();
   });
+
+
+  $("#close-button").on("click", function() {
+    location.reload();
+    });
+
+  
 });
