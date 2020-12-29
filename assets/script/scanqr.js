@@ -1,0 +1,13 @@
+$(document).ready(function() {
+//DOM VARIABLES
+
+//JS VARIABLES
+
+//FUNCTION DECLARATIONS
+
+//FUNCTION CALLS
+
+//EVENT HANDLERS
+
+
+});
