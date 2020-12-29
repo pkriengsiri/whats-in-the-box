@@ -43,6 +43,13 @@ $(document).ready(function () {
       success: function (response) {
         // Get the paste ID from the submitted paste
         var pasteID = response.id;
+        // Adds the box name and paste ID as an object to the array of boxes packed
+        var box = { name: boxName, pasteID: pasteID };
+        userBoxes.push([box]);
+        // Adds the array of user boxes back to local storage
+        localStorage.setItem("boxes", JSON.stringify(userBoxes));
+
+        // Uses the html2pdf API to generate a pdf label of the QR code
         var htmlLink =
           "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" +
           pasteID;
@@ -51,13 +58,13 @@ $(document).ready(function () {
           "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&format=Letter&filename=QRLabel&url=" +
             htmlLink
         );
-        console.log(pasteID);
+
+        // Generates the QR Code to display on the screen
         var myUrl = new URL(
           "https://pkriengsiri.github.io/whats-in-the-box/scan"
         );
         myUrl.searchParams.set("name", pasteID);
         var newUrl = myUrl.href;
-        console.log(newUrl);
         $("#modal-body").empty();
         new QRCode("modal-body", {
           text: newUrl,
