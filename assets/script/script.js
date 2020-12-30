@@ -13,6 +13,8 @@ $(document).ready(function () {
     }
   }
 
+  
+
   // Handles the behavior once the user clicks the submit button
   function generateQRCode() {
     // Pulls text fields from form and stores them as variables
@@ -22,6 +24,7 @@ $(document).ready(function () {
     //If fields are empty the new error modal will show
     if (userName === "" || boxName === "" || boxContent === "") {
   
+
       $('#myModal1').modal('show');
     }
     else {
@@ -67,6 +70,44 @@ $(document).ready(function () {
           $("#print-link").attr(
             "href",
             "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&format=Letter&filename=QRLabel&url=" +
+
+
+    // Stores the user name in local storage
+    localStorage.setItem("user-name", userName);
+
+    // Call the paste API to box the box contents to a new paste
+    var queryURL =
+      "https://api.paste.ee/v1/pastes?key=aNXCh2y6HrufDC2QMvqoKW7in1uvG7AhUOP1Z4JGF&encrypted=false";
+    $.ajax({
+      url: queryURL,
+      type: "POST",
+      data: {
+        description: boxName,
+        sections: [
+          {
+            name: userName,
+            syntax: "autodetect",
+            contents: boxContentArrayString,
+          },
+        ],
+      },
+
+      success: function (response) {
+        // Get the paste ID from the submitted paste
+        var pasteID = response.id;
+        // Adds the box name and paste ID as an object to the array of boxes packed
+        var box = { name: boxName, pasteID: pasteID };
+        userBoxes.push(box);
+        // Adds the array of user boxes back to local storage
+        localStorage.setItem("boxes", JSON.stringify(userBoxes));
+
+        // Uses the html2pdf API to generate a pdf label of the QR code
+        var htmlLink =
+          "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" +
+          pasteID;
+        $("#print-link").attr(
+          "href",
+          "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&format=Letter&filename=QRLabel&url=" +
             htmlLink
           );
 
@@ -94,6 +135,7 @@ $(document).ready(function () {
 
   // FUNCTION CALLS
   init();
+  
 
   // EVENT HANDLERS
   //event listener to save input text into variables
