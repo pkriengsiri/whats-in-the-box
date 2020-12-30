@@ -13,6 +13,8 @@ $(document).ready(function () {
     }
   }
 
+  
+
   // Handles the behavior once the user clicks the submit button
   function generateQRCode() {
     // Pulls text fields from form and stores them as variables
@@ -50,7 +52,7 @@ $(document).ready(function () {
         var pasteID = response.id;
         // Adds the box name and paste ID as an object to the array of boxes packed
         var box = { name: boxName, pasteID: pasteID };
-        userBoxes.push([box]);
+        userBoxes.push(box);
         // Adds the array of user boxes back to local storage
         localStorage.setItem("boxes", JSON.stringify(userBoxes));
 
@@ -85,6 +87,7 @@ $(document).ready(function () {
 
   // FUNCTION CALLS
   init();
+  
 
   // EVENT HANDLERS
   //event listener to save input text into variables
@@ -104,6 +107,9 @@ $(document).ready(function () {
   $("#close-button").on("click", function() {
     location.reload();
     });
+
+
+
 
   
 });
