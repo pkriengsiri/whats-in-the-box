@@ -1,17 +1,20 @@
 $(document).ready(function() {
 
 function renderButtons() {
+
+  var userBoxes = JSON.parse(localStorage.getItem("boxes"));
   for (var i = 0; i < userBoxes.length; i++) {
-    var nameBox = userBoxes[i];
     var listOfBoxes = $("<button>");
     listOfBoxes.addClass("list-group-item list-button col-3");
-    // listOfBoxes.attr("data-paste", nameBox.pasteID);
-    listOfBoxes.text(nameBox.name);
+    listOfBoxes.text(userBoxes[i].name);
     listOfBoxes.css("text-align", "left");
-    $("#box-name").prepend(listOfBoxes);
-    console.log(nameBox.name);
+    $("#list-boxes").prepend(listOfBoxes);
+    console.log(userBoxes[i].name);
   }
 }
 
 
-}
+
+renderButtons();
+
+});

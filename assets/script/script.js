@@ -82,7 +82,7 @@ $(document).ready(function () {
 
   // FUNCTION CALLS
   init();
-  renderButtons();
+  
 
   // EVENT HANDLERS
   //event listener to save input text into variables
@@ -103,10 +103,10 @@ $(document).ready(function () {
     location.reload();
     });
 
- $(document).on("click", ".list-button", function () {
-      getPasteID();
-      getBoxInfo();
-    });
+//  $(document).on("click", ".list-button", function () {
+//       getPasteID();
+//       getBoxInfo();
+//     });
 
 
   
