@@ -9,6 +9,12 @@ body {
     background-color: lightgrey;
     border-bottom: solid;
 }
+.error-header{
+    background-color: white;
+    border-bottom: solid;
+}
+
+
 .form {
     background-color: rgb(169, 120, 53); 
     border-style: solid;
@@ -52,28 +58,38 @@ body {
     border-color: black;
 }
 
-.generate-button, .print-button {
-    background-color:rgb(107, 70, 0);
-    border-color:rgb(107, 70, 0);
+.generate-button, .print-button, .close-button1 {
+    background-color: #A93E35;
+    border-color:#b9534a;
     color: white;
     
 }
-.generate-button:hover, .print-button:hover {
-    background-color:rgb(131, 86, 2);
-    border-color: rgb(107, 70, 0);
+.generate-button:hover, .print-button:hover, .close-button1:hover {
+    background-color:#862a22;
+    border-color: #A93E35;
     color: white;
     
 }
 
  .generate-button:active, .btn-lg, .generate-button-check:focus{
-    background-color:rgb(131, 86, 2);
-    border-color: rgb(107, 70, 0);
+    background-color:#A93E35;
+    border-color: #b9534a;
     outline: none !important;
      
 }
-#close-button {
-    background-color: black;
+.error-title {
+    color: #A93E35;
+    font-size: larger;
 }
+
+.dropdown-item {
+    font-size: larger;
+}
+
+#nav-header{
+    text-align: center;
+}
+
 
 /* hides box flaps below 768px */
 @media screen and (max-width: 768px) {
