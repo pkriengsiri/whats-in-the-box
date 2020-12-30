@@ -5,6 +5,10 @@ body {
     font-size: larger;
 }
 
+.navbar {
+    border-bottom: groove;
+}
+
 .modal-header{
     background-color: lightgrey;
     border-bottom: solid;
@@ -84,6 +88,10 @@ body {
 
 .dropdown-item {
     font-size: larger;
+}
+.tag-line {
+    color:  #A93E35;
+    letter-spacing: 3px;
 }
 
 #nav-header{
