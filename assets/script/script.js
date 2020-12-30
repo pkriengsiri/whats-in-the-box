@@ -19,7 +19,7 @@ $(document).ready(function () {
     var userName = $("#user-name").val();
     var boxName = $("#box-name").val();
     var boxContent = $("#box-content").val();
-
+    
     // Converts the boxContent String to an array with the string split by line breaks
     var boxContentArray = boxContent.split("\n");
     var boxContentArrayString = JSON.stringify(boxContentArray);
@@ -82,7 +82,27 @@ $(document).ready(function () {
       },
     });
   }
-
+    //check to see if any form fields were left blank and alerts the user in modal if any are
+  function checkInputs() {
+    // Pulls text fields from form and stores them as variables
+    var userName = $("#user-name").val();
+    var boxName = $("#box-name").val();
+    var boxContent = $("#box-content").val();
+  
+    
+      if (userName === "" || boxName === "" || boxContent === "") {
+        console.log("there is a blank field");
+        console.log("please fill out all the inputs")
+        $('#modal-name').empty()
+        $('#modal-name').append("Please fill out all form fields")
+        $('#print-link').attr("style", "display: none");
+      }
+      else {
+        $('#print-link').attr("style", "display: show");
+        console.log("theres something in here");
+      }
+    }
+  
   // FUNCTION CALLS
   init();
 
@@ -92,9 +112,9 @@ $(document).ready(function () {
     // Prevents default form behavior
     e.preventDefault();
     //reveals the Modal with QR code
-
+    checkInputs()
     $('#myModal').modal('show');
-   
+    
 
 
     generateQRCode();
