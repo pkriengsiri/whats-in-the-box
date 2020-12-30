@@ -112,8 +112,8 @@ $(document).ready(function () {
           $("#modal-body").empty();
           new QRCode("modal-body", {
             text: newUrl,
-            width: 200,
-            height: 200,
+            width: 400,
+            height: 400,
             colorDark: "#000000",
             colorLight: "#ffffff",
             correctLevel: QRCode.CorrectLevel.H,
