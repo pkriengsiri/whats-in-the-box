@@ -13,6 +13,19 @@ $(document).ready(function () {
     }
   }
 
+  function renderButtons() {
+    for (var i = 0; i < userBoxes.length; i++) {
+      var nameBox = userBoxes[i];
+      var listOfBoxes = $("<button>");
+      listOfBoxes.addClass("list-group-item list-button col-3");
+      // listOfBoxes.attr("data-paste", nameBox.pasteID);
+      listOfBoxes.text(nameBox.name);
+      listOfBoxes.css("text-align", "left");
+      $("#box-name").prepend(listOfBoxes);
+      console.log(nameBox.name);
+    }
+  }
+
   // Handles the behavior once the user clicks the submit button
   function generateQRCode() {
     // Pulls text fields from form and stores them as variables
@@ -45,7 +58,7 @@ $(document).ready(function () {
         var pasteID = response.id;
         // Adds the box name and paste ID as an object to the array of boxes packed
         var box = { name: boxName, pasteID: pasteID };
-        userBoxes.push([box]);
+        userBoxes.push(box);
         // Adds the array of user boxes back to local storage
         localStorage.setItem("boxes", JSON.stringify(userBoxes));
 
@@ -80,6 +93,7 @@ $(document).ready(function () {
 
   // FUNCTION CALLS
   init();
+  renderButtons();
 
   // EVENT HANDLERS
   //event listener to save input text into variables
@@ -99,6 +113,12 @@ $(document).ready(function () {
   $("#close-button").on("click", function() {
     location.reload();
     });
+
+ $(document).on("click", ".list-button", function () {
+      getPasteID();
+      getBoxInfo();
+    });
+
 
   
 });
