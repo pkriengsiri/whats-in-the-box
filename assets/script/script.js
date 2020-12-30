@@ -103,10 +103,7 @@ $(document).ready(function () {
     location.reload();
     });
 
-//  $(document).on("click", ".list-button", function () {
-//       getPasteID();
-//       getBoxInfo();
-//     });
+
 
 
   
