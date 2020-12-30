@@ -82,6 +82,10 @@ body {
     font-size: larger;
 }
 
+.dropdown-item {
+    font-size: larger;
+}
+
 #nav-header{
     text-align: center;
 }
