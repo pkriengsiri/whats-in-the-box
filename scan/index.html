@@ -134,6 +134,8 @@
                     <label class="sr-only" for="zip-form-input">Enter zip code</label>
                     <input type="text" class="form-control mb-2" id="zip-form-input" placeholder="Enter zip code" maxlength="5">
                     <p class="d-none" id="zip-error">Please enter a 5 digit zip code</p>
+                    <p class="d-none" id="geo-unsupported">Geolocation is not supported by your browser.  Please search by zip.</p>
+                    <p class="d-none" id="geo-error">Error in obtaining location.  Please search by zip.</p>
                   </div>
                   <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-2" id="zip-search">Search by zip</button> or

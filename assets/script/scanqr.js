@@ -12,7 +12,7 @@ $(document).ready(function () {
   function getPasteID() {
     var urlArray = URL.split("=");
     pasteID = urlArray[1];
-    console.log(pasteID);
+    //console.log(pasteID);
   }
 
   //Pulls the box info from the paste and sets the content on the DOM
@@ -102,7 +102,31 @@ $(document).ready(function () {
 
   // Displays the list of charities within 10 miles of the user's zip
   function displayCharitiesByGeo() {
-    console.log(window);
+    var latitude = "";
+    var longitude = "";
+
+    // Check to see if geolocation is supported
+    if(!navigator.geolocation) {
+        // Display error
+        $("#geo-unsupported").removeClass("d-none");
+      } else {
+        // Get coordinates
+          navigator.geolocation.getCurrentPosition(function(position) {
+            latitude  = position.coords.latitude;
+            longitude = position.coords.longitude;
+            console.log(latitude);
+            console.log(longitude);
+          }, function() {
+            //Remove prior errors
+            $("#geo-unsupported").addClass("d-none");
+            $("#zip-error").addClass("d-none");
+            //Display retrieval error
+            $("#geo-error").removeClass("d-none");
+          })
+        
+        console.log(latitude);
+        console.log(longitude);
+      }
   }
 
   //FUNCTION CALLS
