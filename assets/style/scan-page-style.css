@@ -6,6 +6,6 @@ body {
 }
 
 /* ID SELECTORS */
-#zip-error, #geo-unsupported, #geo-unsupported {
+#zip-error, #geo-unsupported, #geo-error {
     color: red;
 }

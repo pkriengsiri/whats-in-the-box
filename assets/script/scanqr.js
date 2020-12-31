@@ -12,7 +12,7 @@ $(document).ready(function () {
   function getPasteID() {
     var urlArray = URL.split("=");
     pasteID = urlArray[1];
-  };
+  }
 
   //Pulls the box info from the paste and sets the content on the DOM
   function getBoxInfo() {
@@ -42,7 +42,7 @@ $(document).ready(function () {
       $("#user-name").text(userName);
       $("#box-name").text(boxName);
     });
-  };
+  }
 
   // Displays the list of charities within 10 miles of the user's zip
   function displayCharitiesByZip() {
@@ -72,8 +72,8 @@ $(document).ready(function () {
         // Display first 10 charities from the API call
         printCharities(response);
       });
-    };
-  };
+    }
+  }
 
   // Displays the list of charities within 10 miles of the user's zip
   function displayCharitiesByGeo() {
@@ -107,10 +107,16 @@ $(document).ready(function () {
             // Clear the list
             $("#charity-list").empty();
 
+            // Hide any error messages
+            $("#zip-error").addClass("d-none");
+            $("#geo-unsupported").addClass("d-none");
+            $("#geo-error").addClass("d-none");
+
             // Display first 10 charities from the API call
             printCharities(response);
           });
         },
+        // Display error if geolocation fails
         function () {
           //Remove prior errors
           $("#geo-unsupported").addClass("d-none");
@@ -119,8 +125,8 @@ $(document).ready(function () {
           $("#geo-error").removeClass("d-none");
         }
       );
-    };
-  };
+    }
+  }
 
   // Prints the list of charities to the modal element on the DOM
   function printCharities(response) {
@@ -149,8 +155,8 @@ $(document).ready(function () {
       charityMapsEl.attr("target", "_blank");
       charityLiEl.append(charityMapsEl);
       $("#charity-list").append(charityLiEl);
-    };
-  };
+    }
+  }
 
   //FUNCTION CALLS
   getPasteID();

@@ -127,7 +127,7 @@
                 Charities within 10 miles
               </h4>
             </div>
-            <div id="modal-form">
+            <div class="m-2" id="modal-form">
               <form id="charity-search">
                 <div class="form-row align-items-center">
                   <div class="col-auto">
@@ -135,7 +135,7 @@
                     <input type="text" class="form-control mb-2" id="zip-form-input" placeholder="Enter zip code" maxlength="5">
                     <p class="d-none" id="zip-error">Please enter a 5 digit zip code</p>
                     <p class="d-none" id="geo-unsupported">Geolocation is not supported by your browser.  Please search by zip.</p>
-                    <p class="d-none" id="geo-unsupported">Error in obtaining location.  Please search by zip.</p>
+                    <p class="d-none" id="geo-error">Error in obtaining location.  Please search by zip.</p>
                   </div>
                   <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-2" id="zip-search">Search by zip</button> or
@@ -145,7 +145,7 @@
               </form>
             </div>
             <div class="py-3 mx-auto" id="modal-body">
-              <ol class="list-group" id="charity-list"></ol>
+              <ol class="list-group m-2" id="charity-list"></ol>
             </div>
             <div class="modal-footer">
               <button
