@@ -29,13 +29,56 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/scan-page-style.css" />
+
     <link href="../assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
+    
     <!-- NAVBAR -->
     <nav class="navbar navbar-light bg-light">
-      <span class="mb-0 h1 mx-auto">What's in the Box?</span>
+      <div class="row w-100">
+        <div class="col-1">
+          <div class="dropdown d-none">
+            <button
+              class="btn btn-secondary dropdown-toggle m-2"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span><i class="fas fa-bars"></i></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >How to Use "What's in the Box"</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html"
+                  >My Boxes</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html">Merch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="mb-0 h1" id="nav-header">
+            What's in the Box? <i class="fas fa-box-open"></i>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
     </nav>
 
     <!-- CONTENT -->
@@ -51,11 +94,15 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <h4>Need to get rid of something? <button type="button" class="btn btn-primary">Find a local charity near you!</button></h4>
-            
+            <h4>
+              Need to get rid of something?
+              <button type="button" class="btn btn-primary">
+                Find a local charity near you!
+              </button>
+            </h4>
+          </div>
         </div>
       </div>
-
       <!-- MODAL Error Message-->
       <div
         class="modal fade"
@@ -68,10 +115,11 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="modal-name">Charities within 10 miles</h4>
+              <h4 class="modal-title" id="modal-name">
+                Charities within 10 miles
+              </h4>
             </div>
-            <div class="py-3 mx-auto" id="modal-body">
-            </div>
+            <div class="py-3 mx-auto" id="modal-body"></div>
             <div class="modal-footer">
               <button
                 type="button"
