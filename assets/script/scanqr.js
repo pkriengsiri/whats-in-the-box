@@ -43,14 +43,21 @@ function getBoxInfo() {
         });
 }
 
+// Displays the charity modal with list of charities within 10 miles
+function displayCharities() {
+    console.log(window);
+    $("#charityModal").modal("show");
+    
+
+    
+}
+
 //FUNCTION CALLS
 getPasteID();
 getBoxInfo();
 
 //EVENT HANDLERS
-$("#charity-button").on("click",function() {
-    $("#charityModal").modal("show");
-});
+$("#charity-button").on("click",displayCharities);
 
 $("#close-button").on("click", function () {
     $("#charityModal").modal("hide");
