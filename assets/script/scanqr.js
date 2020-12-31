@@ -45,7 +45,17 @@ function getBoxInfo() {
 
 // Displays the list of charities within 10 miles of the user's zip
 function displayCharitiesByZip() {
-    console.log(window);
+    // Get the user zip code from the form
+    zipCode = $("#zip-form-input").val();
+
+    //Check to see if it's a number or 5 digits
+    if(zipCode.length <5 || isNaN(zipCode)) {
+        // Display error message
+        $("#zip-error").removeClass("d-none");
+    } else {
+        // Hide any error messages
+        $("#zip-error").addClass("d-none");
+    }
 }
 
 // Displays the list of charities within 10 miles of the user's zip
@@ -72,6 +82,6 @@ $("#modal-form").on("submit", function(e) {
 
 $("#zip-search").on("click", displayCharitiesByZip)
 
-$("#geo-search").om("click", displayCharitiesByGeo)
+$("#geo-search").on("click", displayCharitiesByGeo)
 
 });

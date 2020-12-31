@@ -131,8 +131,9 @@
               <form id="charity-search">
                 <div class="form-row align-items-center">
                   <div class="col-auto">
-                    <label class="sr-only" for="inlineFormInput">Enter zip code</label>
-                    <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter zip code">
+                    <label class="sr-only" for="zip-form-input">Enter zip code</label>
+                    <input type="text" class="form-control mb-2" id="zip-form-input" placeholder="Enter zip code" maxlength="5">
+                    <p class="d-none" id="zip-error">Please enter a 5 digit zip code</p>
                   </div>
                   <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-2" id="zip-search">Search by zip</button> or

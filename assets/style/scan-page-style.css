@@ -3,3 +3,7 @@ body {
     font-family: 'Staatliches', cursive;
     font-size: larger;
 }
+
+#zip-error {
+    color: red;
+}
