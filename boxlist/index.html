@@ -1,39 +1,95 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>List of Boxes</title>
+    <title>What's in the Box?</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
+    <!-- jQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <!-- QRCode JS file -->
+    <script src="./assets/script/qrcode.min.js"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link href="./assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-light bg-light">
-      <span class="mb-0 h1 mx-auto">What's in the Box?</span>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2>List of Boxes:</h2>
-          <div id="list-boxes"></div>
+      <div class="row w-100">
+        <div class="col-1">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle m-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <span><i class="fas fa-bars"></i></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li><a class="dropdown-item" href="../index.html">Home</a></li>
+              <li><a class="dropdown-item" href="#">How to Use "What's in the Box"</a></li>
+              <li><a class="dropdown-item" href="../boxlist/index.html">My Boxes</a></li>
+              <li><a class="dropdown-item" href="index.html">About Us</a></li>
+              <li><a class="dropdown-item" href="./boxlist/index.html">Merch</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="col-10">      
+      <div class="mb-0 h1" id="nav-header">What's in the Box? <i class="fas fa-box-open"></i>
+        <h5 class="tag-line mb-0">- A Truly Moving experience -</h5>
       </div>
     </div>
+        <div class="col-1">
+    </div>
+  </div>
+    </div>
+    </nav>
+    
+    
+
+          
+          <!-- <div id="list-boxes"></div> -->
+          <!-- <h3>Box Title</h3>
+          <a><i class="fas fa-box fa-5x"></i></a>
+          <br>
+          <button>Generate QR code</button> -->
+
+          <div class="container">
+            <div class="row mt-5 justify-content-center" id="box-row">
+                   
+                </div>
+                
+            </div>
+        </div>
+        
+          
+      
 
     <script src="../assets/script/boxlist.js"></script>
   </body>

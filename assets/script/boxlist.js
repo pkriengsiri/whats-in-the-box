@@ -13,21 +13,22 @@ $(document).ready(function () {
         "https://pkriengsiri.github.io/whats-in-the-box/Print/index.html?" +
         paste;
 
-      // Creates a ul, creates a li, creates two buttons for each li, then appends all to the DOM
-      var ulEl = $("<ul>");
-      ulEl.addClass("list-group");
-      var liEl = $("<li>");
-      liEl.addClass("list-group-item");
-      var boxDisplayButton = $("<a>");
-      boxDisplayButton.addClass("btn");
-      boxDisplayButton.text("Box Name: " + userBoxes[i].name);
-      boxDisplayButton.attr(
+  
+      var card = $("<div>").addClass("card card-custom mx-2 mb-3 align-items-center border-dark");
+      var cardTitle = $("<h4>").addClass("mt-1");
+      var boxContents = $("<a>").addClass("fas fa-box fa-6x mt-1");
+
+      cardTitle.text(userBoxes[i].name);
+      boxContents.attr(
         "href",
         "https://pkriengsiri.github.io/whats-in-the-box/scan/?name=" + paste
       );
-      liEl.append(boxDisplayButton);
+    
+      
+      
+
       var reprintQRButton = $("<a>");
-      reprintQRButton.addClass("btn");
+      reprintQRButton.addClass("btn card-button mt-2 mb-1");
       reprintQRButton.text("Reprint QR Code");
       reprintQRButton.attr(
         "href",
@@ -35,9 +36,14 @@ $(document).ready(function () {
           htmlLink
       );
       reprintQRButton.attr("target","_blank");
-      liEl.append(reprintQRButton);
-      ulEl.append(liEl);
-      $("#list-boxes").append(ulEl);
+
+      card.append(cardTitle);
+      card.append(boxContents);
+      card.append(reprintQRButton);
+
+      $("#box-row").append(card);
+      
+       
     }
   }
 
