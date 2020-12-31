@@ -12,7 +12,7 @@ $(document).ready(function () {
   function getPasteID() {
     var urlArray = URL.split("=");
     pasteID = urlArray[1];
-  }
+  };
 
   //Pulls the box info from the paste and sets the content on the DOM
   function getBoxInfo() {
@@ -42,7 +42,7 @@ $(document).ready(function () {
       $("#user-name").text(userName);
       $("#box-name").text(boxName);
     });
-  }
+  };
 
   // Displays the list of charities within 10 miles of the user's zip
   function displayCharitiesByZip() {
@@ -70,35 +70,10 @@ $(document).ready(function () {
         $("#charity-list").empty();
 
         // Display first 10 charities from the API call
-        for (var i = 0; i < 10; i++) {
-          charityLiEl = $("<li>");
-          charityLiEl.addClass("list-group-item");
-          charityNameEl = $("<h5>");
-          charityNameEl.text(response.data[i].charityName);
-          charityLiEl.append(charityNameEl);
-          charityURLEl = $("<a>");
-          charityURLEl.text("Website");
-          charityURLEl.attr("href", response.data[i].url);
-          charityURLEl.attr("target", "_blank");
-          charityLiEl.append(charityURLEl);
-          brEl = $("<br>");
-          charityLiEl.append(brEl);
-          charityMapsEl = $("<a>");
-          charityMapsEl.text("Google Maps");
-          charityMapsEl.attr(
-            "href",
-            "https://www.google.com/maps/search/?api=1&query=" +
-              response.data[i].latitude +
-              "," +
-              response.data[i].longitude
-          );
-          charityMapsEl.attr("target", "_blank");
-          charityLiEl.append(charityMapsEl);
-          $("#charity-list").append(charityLiEl);
-        }
+        printCharities(response);
       });
-    }
-  }
+    };
+  };
 
   // Displays the list of charities within 10 miles of the user's zip
   function displayCharitiesByGeo() {
@@ -133,32 +108,7 @@ $(document).ready(function () {
             $("#charity-list").empty();
 
             // Display first 10 charities from the API call
-            for (var i = 0; i < 10; i++) {
-              charityLiEl = $("<li>");
-              charityLiEl.addClass("list-group-item");
-              charityNameEl = $("<h5>");
-              charityNameEl.text(response.data[i].charityName);
-              charityLiEl.append(charityNameEl);
-              charityURLEl = $("<a>");
-              charityURLEl.text("Website");
-              charityURLEl.attr("href", response.data[i].url);
-              charityURLEl.attr("target", "_blank");
-              charityLiEl.append(charityURLEl);
-              brEl = $("<br>");
-              charityLiEl.append(brEl);
-              charityMapsEl = $("<a>");
-              charityMapsEl.text("Google Maps");
-              charityMapsEl.attr(
-                "href",
-                "https://www.google.com/maps/search/?api=1&query=" +
-                  response.data[i].latitude +
-                  "," +
-                  response.data[i].longitude
-              );
-              charityMapsEl.attr("target", "_blank");
-              charityLiEl.append(charityMapsEl);
-              $("#charity-list").append(charityLiEl);
-            }
+            printCharities(response);
           });
         },
         function () {
@@ -169,8 +119,38 @@ $(document).ready(function () {
           $("#geo-error").removeClass("d-none");
         }
       );
-    }
-  }
+    };
+  };
+
+  // Prints the list of charities to the modal element on the DOM
+  function printCharities(response) {
+    for (var i = 0; i < 10; i++) {
+      charityLiEl = $("<li>");
+      charityLiEl.addClass("list-group-item");
+      charityNameEl = $("<h5>");
+      charityNameEl.text(response.data[i].charityName);
+      charityLiEl.append(charityNameEl);
+      charityURLEl = $("<a>");
+      charityURLEl.text("Website");
+      charityURLEl.attr("href", response.data[i].url);
+      charityURLEl.attr("target", "_blank");
+      charityLiEl.append(charityURLEl);
+      brEl = $("<br>");
+      charityLiEl.append(brEl);
+      charityMapsEl = $("<a>");
+      charityMapsEl.text("Google Maps");
+      charityMapsEl.attr(
+        "href",
+        "https://www.google.com/maps/search/?api=1&query=" +
+          response.data[i].latitude +
+          "," +
+          response.data[i].longitude
+      );
+      charityMapsEl.attr("target", "_blank");
+      charityLiEl.append(charityMapsEl);
+      $("#charity-list").append(charityLiEl);
+    };
+  };
 
   //FUNCTION CALLS
   getPasteID();
