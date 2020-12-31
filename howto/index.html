@@ -44,10 +44,26 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light">
-      <div class="mb-0 h1 mx-auto">What's in the Box? <i class="fas fa-box-open"></i>
-      </div>
-    
-    </nav>
+        <div class="row w-100">
+          <div class="col-1">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle m-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <span><i class="fas fa-bars"></i></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                <li><a class="dropdown-item" href="../howto/index.html">How to Use "What's in the Box"</a></li>
+                <li><a class="dropdown-item" href="../boxlist/index.html">My Boxes</a></li>
+                <li><a class="dropdown-item" href="../aboutus/index.html">About Us</a></li>
+                <li><a class="dropdown-item" href="../boxlist/index.html">Merch</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-10">      
+        <div class="mb-0 h1" id="nav-header">What's in the Box? <i class="fas fa-box-open"></i>
+          <h5 class="tag-line mb-0">- A Truly Moving experience -</h5>
+        </div>
+      </nav>
     <div class="container">
      
       <!-- top box flap -->
@@ -60,10 +76,10 @@
       <div class="row justify-content-md-center">
         <!-- left box flap -->
         <div class="col-1 left-flap"></div>
-
-        <div class="card text-center col-md6 lg-shadow form w-50">
+        <!-- How to Card in list format -->
+        <div class="form text-center col-md6 lg-shadow w-50">
             <div class="card-header">
-             <h3> How to use What's in the box?</h3>
+             <h2> How to use What's in the box?</h2>
             </div>
             <div class="card-body">
               <p class="card-text">
@@ -76,45 +92,9 @@
                   </ul></p>
               <a href="../index.html" class="btn card-button">Main Page</a>
             </div>
-            <!-- <div class="card-footer text-muted mb-3">
-             
-            </div> -->
           </div>
-        <!-- user input -->
-        <!-- <div class="col-md-6 lg-shadow form">
-          <form>
-            <div class="form-group">
-              <label for="">User name:</label>
-              <input
-                type="user name"
-                class="form-control boxInput"
-                id="user-name"
-                aria-describedby="emailHelp"
-              />
-            </div>
-            <div class="form-group">
-              <label for="">Box name:</label>
-              <input type="user name" class="form-control" id="box-name" />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Box content:</label
-              >
-              <textarea
-                class="form-control"
-                id="box-content"
-                rows="10"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-lg m-2 generate-button shadow-none" id="print-label">
-              Generate QR Code  <i class="fas fa-qrcode"></i>
-            </button>
-
-          </form>
-          
-          
-         ->
+       
+         
         <!-- right box flap -->
         <div class="col-1 right-flap"></div>
       </div>

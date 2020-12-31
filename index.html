@@ -33,8 +33,11 @@
       crossorigin="anonymous"
     />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- QRCode JS file -->
     <script src="./assets/script/qrcode.min.js"></script>
@@ -43,7 +46,6 @@
     <link href="./assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
-
     <nav class="navbar navbar-light bg-light">
       <div class="row w-100">
         <div class="col-1">
@@ -64,23 +66,17 @@
       <div class="mb-0 h1" id="nav-header">What's in the Box? <i class="fas fa-box-open"></i>
         <h5 class="tag-line mb-0">- A Truly Moving experience -</h5>
       </div>
-    </div>
-        <div class="col-1">
-    </div>
-  </div>
-    </div>
     </nav>
-  
+
     <!-- main content -->
     <div class="container">
-     
       <!-- top box flap -->
       <div class="row mt-3 justify-content-md-center">
         <div class="col-1"></div>
         <div class="col-md-6 p-5 top-flap"></div>
         <div class="col-1"></div>
       </div>
-      
+
       <div class="row justify-content-md-center">
         <!-- left box flap -->
         <div class="col-1 left-flap"></div>
@@ -111,12 +107,15 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="btn-lg m-2 generate-button shadow-none" id="print-label">
-              Generate QR Code  <i class="fas fa-qrcode"></i>
+            <button
+              type="submit"
+              class="btn-lg m-2 generate-button shadow-none"
+              id="print-label"
+            >
+              Generate QR Code <i class="fas fa-qrcode"></i>
             </button>
-
           </form>
-          
+
           <!-- MODAL -->
           <div
             class="modal fade"
@@ -129,10 +128,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title" id="modal-name">
-                    Your QR Code:
-                  </h4>
-                
+                  <h4 class="modal-title" id="modal-name">Your QR Code:</h4>
                 </div>
                 <div class="ps-5 py-3" id="modal-body"></div>
                 <div class="modal-footer">
@@ -143,11 +139,9 @@
                     id="close-button"
                   >
                     Close
-                  
-                 </button>
-                 
+                  </button>
 
-                 <a class="btn print-button" id="print-link" role="button">Print</a> 
+                 <a class="btn print-button" id="print-link" target="_blank" role="button">Print</a> 
                   
                 
                 </div>
@@ -170,9 +164,10 @@
                   <h4 class="modal-title error-title" id="modal-name1">
                     Error!
                   </h4>
-                
                 </div>
-                <div class="py-3 mx-auto" id="modal-body">Please fill out all of the form fields</div>
+                <div class="py-3 mx-auto" id="modal-body">
+                  Please fill out all of the form fields
+                </div>
                 <div class="modal-footer">
                   <button
                     type="button"
@@ -181,11 +176,7 @@
                     id="close-button1"
                   >
                     Close
-                  
-                 </button>
-                
-                  
-                
+                  </button>
                 </div>
               </div>
             </div>
@@ -200,8 +191,8 @@
         <div class="col-md-6 p-5 bottom-flap"></div>
         <div class="col-1"></div>
       </div>
-  </div>
-    
+    </div>
+
     <script src="./assets/script/script.js"></script>
   </body>
 </html>

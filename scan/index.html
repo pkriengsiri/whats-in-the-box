@@ -29,28 +29,139 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/scan-page-style.css" />
+
     <link href="../assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
-      <!-- NAVBAR -->
+
+    <!-- NAVBAR -->
     <nav class="navbar navbar-light bg-light">
-      <span class="mb-0 h1 mx-auto">What's in the Box?</span>
+      <div class="row w-100">
+        <div class="col-1">
+          <div class="dropdown d-none">
+            <button
+              class="btn btn-secondary dropdown-toggle m-2"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span><i class="fas fa-bars"></i></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >How to Use "What's in the Box"</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html"
+                  >My Boxes</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html">Merch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="mb-0 h1" id="nav-header">
+            What's in the Box? <i class="fas fa-box-open"></i>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
     </nav>
 
     <!-- CONTENT -->
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-            <h3>User Name:</h3>
-            <p id="user-name"></p>
-            <h3>Box Name:</h3>
-            <p id="box-name"></p>
-            <h3>Box Contents:</h3>
-            <p id="box-contents"></p>
+          <h3>User Name:</h3>
+          <p id="user-name"></p>
+          <h3>Box Name:</h3>
+          <p id="box-name"></p>
+          <h3>Box Contents:</h3>
+          <p id="box-contents"></p>
         </div>
-    </div>    
+        <div class="row">
+          <div class="col-md-12">
+            <h4>
+              Need to get rid of something?
+              <button type="button" class="btn btn-primary" id="charity-button">
+                Find a local charity near you!
+              </button>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL-->
+      <div
+        class="modal fade"
+        id="charityModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="listOfLocalCharities"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-name">
+                Charities within 10 miles
+              </h4>
+            </div>
+            <div class="m-2" id="modal-form">
+              <form id="charity-search">
+                <div class="form-row align-items-center">
+                  <div class="col-auto">
+                    <label class="sr-only" for="zip-form-input">Enter zip code</label>
+                    <input type="text" class="form-control mb-2" id="zip-form-input" placeholder="Enter zip code" maxlength="5">
+                    <p class="d-none" id="zip-error">Please enter a 5 digit zip code</p>
+                    <p class="d-none" id="geo-unsupported">Geolocation is not supported by your browser.  Please search by zip.</p>
+                    <p class="d-none" id="geo-error">Error in obtaining location.  Please search by zip.</p>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2" id="zip-search">Search by zip</button> or
+                    <button type="submit" class="btn btn-primary mb-2" id="geo-search">Use my location</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="py-3 mx-auto" id="modal-body">
+              <ol class="list-group m-2" id="charity-list"></ol>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary close-button"
+                data-dismiss="modal"
+                id="close-button"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../assets/script/scanqr.js"></script>
-    
   </body>
 </html>
