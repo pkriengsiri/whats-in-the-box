@@ -43,13 +43,16 @@ function getBoxInfo() {
         });
 }
 
-// Displays the charity modal with list of charities within 10 miles
-function displayCharities() {
+// Displays the list of charities within 10 miles of the user's zip
+function displayCharitiesByZip() {
     console.log(window);
     $("#charityModal").modal("show");
-    
+}
 
-    
+// Displays the list of charities within 10 miles of the user's zip
+function displayCharitiesByGeo() {
+    console.log(window);
+    $("#charityModal").modal("show");
 }
 
 //FUNCTION CALLS
@@ -57,11 +60,17 @@ getPasteID();
 getBoxInfo();
 
 //EVENT HANDLERS
-$("#charity-button").on("click",displayCharities);
+$("#charity-button").on("click", function() {
+    $("#charityModal").modal("show");
+});
 
 $("#close-button").on("click", function () {
     $("#charityModal").modal("hide");
   });
+
+$("#modal-form").on("submit", function(e) {
+    e.preventDefault();
+})
 
 
 });
