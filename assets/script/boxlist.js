@@ -34,6 +34,7 @@ $(document).ready(function () {
         "https://api.html2pdf.app/v1/generate?apiKey=flx8MMkbCefJ2A3NYSTRE53Wi0ZlvXtFem7hEKSTtFEOrb0PPiaQKXRuKqGThL8m&format=Letter&filename=QRLabel&url=" +
           htmlLink
       );
+      reprintQRButton.attr("target","_blank");
       liEl.append(reprintQRButton);
       ulEl.append(liEl);
       $("#list-boxes").append(ulEl);
