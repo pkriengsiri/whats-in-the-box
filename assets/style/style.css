@@ -5,6 +5,10 @@ body {
     font-size: larger;
 }
 
+a:hover {
+    
+}
+
 .navbar {
     border-bottom: groove;
 }
@@ -25,7 +29,7 @@ body {
     font-size: x-large;
 }
 /* font awesome box icon */
-.fa-box-open {
+.fa-box-open, .fa-box{
     color: rgb(169, 120, 53);
 }
 
@@ -82,21 +86,31 @@ body {
     box-shadow: none;
      
 }
+
+/* modal error styling */
 .error-title {
     color: #A93E35;
     font-size: larger;
 }
 
+/* nav menu styling */
 .dropdown-item {
     font-size: larger;
 }
+
+/* tag line under header */
 .tag-line {
     color:  #A93E35;
     letter-spacing: 3px;
 }
+
 .about-us {
     background-color:rgb(192, 143, 79);
     color: white;
+}
+
+.card-custom {
+    width: 220px;
 }
 
 #nav-header{
