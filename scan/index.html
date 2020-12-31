@@ -33,7 +33,7 @@
     <link href="../assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
-      <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-light bg-light">
       <span class="mb-0 h1 mx-auto">What's in the Box?</span>
     </nav>
@@ -42,15 +42,46 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-            <h3>User Name:</h3>
-            <p id="user-name"></p>
-            <h3>Box Name:</h3>
-            <p id="box-name"></p>
-            <h3>Box Contents:</h3>
-            <p id="box-contents"></p>
+          <h3>User Name:</h3>
+          <p id="user-name"></p>
+          <h3>Box Name:</h3>
+          <p id="box-name"></p>
+          <h3>Box Contents:</h3>
+          <p id="box-contents"></p>
         </div>
-    </div>    
+      </div>
+
+      <!-- MODAL Error Message-->
+      <div
+        class="modal fade"
+        id="charityModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="listOfLocalCharities"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-name">Charities within 10 miles</h4>
+            </div>
+            <div class="py-3 mx-auto" id="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary close-button"
+                data-dismiss="modal"
+                id="close-button"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../assets/script/scanqr.js"></script>
-    
   </body>
 </html>
