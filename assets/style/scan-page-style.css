@@ -1,9 +1,11 @@
+/* ELEMENT SELECTORS */
 body {
     background-image: none;
     font-family: 'Staatliches', cursive;
     font-size: larger;
 }
 
-#zip-error {
+/* ID SELECTORS */
+#zip-error, #geo-unsupported, #geo-unsupported {
     color: red;
 }
