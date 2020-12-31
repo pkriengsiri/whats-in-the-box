@@ -157,19 +157,24 @@ $(document).ready(function () {
   getBoxInfo();
 
   //EVENT HANDLERS
+  // Show modal when charity button is clicked
   $("#charity-button").on("click", function () {
     $("#charityModal").modal("show");
   });
 
+  // Close modal
   $("#close-button").on("click", function () {
     $("#charityModal").modal("hide");
   });
 
+  // Prevent form default behavior
   $("#modal-form").on("submit", function (e) {
     e.preventDefault();
   });
 
+  // Calls displayCharitiesByZip
   $("#zip-search").on("click", displayCharitiesByZip);
 
+  // Calls displayCharitiesByGeo
   $("#geo-search").on("click", displayCharitiesByGeo);
 });
