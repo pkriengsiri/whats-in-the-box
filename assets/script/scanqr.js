@@ -46,13 +46,11 @@ function getBoxInfo() {
 // Displays the list of charities within 10 miles of the user's zip
 function displayCharitiesByZip() {
     console.log(window);
-    $("#charityModal").modal("show");
 }
 
 // Displays the list of charities within 10 miles of the user's zip
 function displayCharitiesByGeo() {
     console.log(window);
-    $("#charityModal").modal("show");
 }
 
 //FUNCTION CALLS
@@ -72,5 +70,8 @@ $("#modal-form").on("submit", function(e) {
     e.preventDefault();
 })
 
+$("#zip-search").on("click", displayCharitiesByZip)
+
+$("#geo-search").om("click", displayCharitiesByGeo)
 
 });
