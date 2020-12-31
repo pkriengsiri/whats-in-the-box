@@ -12,7 +12,6 @@ $(document).ready(function () {
   function getPasteID() {
     var urlArray = URL.split("=");
     pasteID = urlArray[1];
-    //console.log(pasteID);
   }
 
   //Pulls the box info from the paste and sets the content on the DOM
@@ -57,6 +56,8 @@ $(document).ready(function () {
     } else {
       // Hide any error messages
       $("#zip-error").addClass("d-none");
+      $("#geo-unsupported").addClass("d-none");
+      $("#geo-error").addClass("d-none");
 
       // API call to org hunter api to get charities by zip
       $.ajax({
@@ -65,7 +66,6 @@ $(document).ready(function () {
           zipCode,
         method: "GET",
       }).then(function (response) {
-        console.log(response);
         // Clear the list
         $("#charity-list").empty();
 
@@ -106,27 +106,70 @@ $(document).ready(function () {
     var longitude = "";
 
     // Check to see if geolocation is supported
-    if(!navigator.geolocation) {
-        // Display error
-        $("#geo-unsupported").removeClass("d-none");
-      } else {
-        // Get coordinates
-          navigator.geolocation.getCurrentPosition(function(position) {
-            latitude  = position.coords.latitude;
-            longitude = position.coords.longitude;
-            console.log(latitude);
-            console.log(longitude);
-          }, function() {
-            //Remove prior errors
-            $("#geo-unsupported").addClass("d-none");
-            $("#zip-error").addClass("d-none");
-            //Display retrieval error
-            $("#geo-error").removeClass("d-none");
-          })
-        
-        console.log(latitude);
-        console.log(longitude);
-      }
+    if (!navigator.geolocation) {
+      //Remove prior errors
+      $("#zip-error").addClass("d-none");
+      $("#geo-error").addClass("d-none");
+
+      // Display error
+      $("#geo-unsupported").removeClass("d-none");
+    } else {
+      // Get coordinates
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          latitude = position.coords.latitude;
+          longitude = position.coords.longitude;
+
+          // API call to org hunter api to get charities by zip
+          $.ajax({
+            url:
+              "https://cors-anywhere.herokuapp.com/http://data.orghunter.com/v1/charitysearch?user_key=219c0c9b2d181b353f5f69036fb5e105&eligible=1&distance=10&latitude=" +
+              latitude +
+              "&longitude=" +
+              longitude,
+            method: "GET",
+          }).then(function (response) {
+            // Clear the list
+            $("#charity-list").empty();
+
+            // Display first 10 charities from the API call
+            for (var i = 0; i < 10; i++) {
+              charityLiEl = $("<li>");
+              charityLiEl.addClass("list-group-item");
+              charityNameEl = $("<h5>");
+              charityNameEl.text(response.data[i].charityName);
+              charityLiEl.append(charityNameEl);
+              charityURLEl = $("<a>");
+              charityURLEl.text("Website");
+              charityURLEl.attr("href", response.data[i].url);
+              charityURLEl.attr("target", "_blank");
+              charityLiEl.append(charityURLEl);
+              brEl = $("<br>");
+              charityLiEl.append(brEl);
+              charityMapsEl = $("<a>");
+              charityMapsEl.text("Google Maps");
+              charityMapsEl.attr(
+                "href",
+                "https://www.google.com/maps/search/?api=1&query=" +
+                  response.data[i].latitude +
+                  "," +
+                  response.data[i].longitude
+              );
+              charityMapsEl.attr("target", "_blank");
+              charityLiEl.append(charityMapsEl);
+              $("#charity-list").append(charityLiEl);
+            }
+          });
+        },
+        function () {
+          //Remove prior errors
+          $("#geo-unsupported").addClass("d-none");
+          $("#zip-error").addClass("d-none");
+          //Display retrieval error
+          $("#geo-error").removeClass("d-none");
+        }
+      );
+    }
   }
 
   //FUNCTION CALLS
