@@ -62,23 +62,24 @@ body {
     border-color: black;
 }
 
-.generate-button, .print-button, .close-button1 {
+.generate-button, .print-button, .close-button1, .card-button {
     background-color: #A93E35;
     border-color:#b9534a;
     color: white;
     
 }
-.generate-button:hover, .print-button:hover, .close-button1:hover {
+.generate-button:hover, .print-button:hover, .close-button1:hover, .card-button:hover{
     background-color:#862a22;
     border-color: #A93E35;
     color: white;
     
 }
 
- .generate-button:active, .btn-lg, .generate-button-check:focus{
+ .generate-button:active, .btn-lg, .generate-button-check:focus, .card-button:active, .card-button-check:focus {
     background-color:#A93E35;
     border-color: #b9534a;
     outline: none !important;
+    box-shadow: none;
      
 }
 .error-title {
@@ -92,6 +93,10 @@ body {
 .tag-line {
     color:  #A93E35;
     letter-spacing: 3px;
+}
+.about-us {
+    background-color:rgb(192, 143, 79);
+    color: white;
 }
 
 #nav-header{
