@@ -48,6 +48,13 @@ getPasteID();
 getBoxInfo();
 
 //EVENT HANDLERS
+$("#charity-button").on("click",function() {
+    $("#charityModal").modal("show");
+});
+
+$("#close-button").on("click", function () {
+    $("#charityModal").modal("hide");
+  });
 
 
 });
