@@ -5,8 +5,8 @@ body {
     font-size: larger;
 }
 
-a:hover {
-    
+.fa-box:hover {
+    color: rgb(105, 75, 33);
 }
 
 .navbar {
@@ -111,6 +111,7 @@ a:hover {
 
 .card-custom {
     width: 220px;
+    
 }
 
 #nav-header{

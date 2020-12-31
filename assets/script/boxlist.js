@@ -14,8 +14,8 @@ $(document).ready(function () {
         paste;
 
   
-      var card = $("<div>").addClass("card card-custom mx-2 mb-3 align-items-center");
-      var cardTitle = $("<h3>");
+      var card = $("<div>").addClass("card card-custom mx-2 mb-3 align-items-center border-dark");
+      var cardTitle = $("<h4>").addClass("mt-1");
       var boxContents = $("<a>").addClass("fas fa-box fa-6x mt-1");
 
       cardTitle.text(userBoxes[i].name);
@@ -28,7 +28,7 @@ $(document).ready(function () {
       
 
       var reprintQRButton = $("<a>");
-      reprintQRButton.addClass("btn");
+      reprintQRButton.addClass("btn card-button mt-2 mb-1");
       reprintQRButton.text("Reprint QR Code");
       reprintQRButton.attr(
         "href",
