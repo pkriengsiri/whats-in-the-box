@@ -9,7 +9,7 @@ $(document).ready(function() {
       myUrl.searchParams.set("name", pasteID);
       var newUrl = myUrl.href;
       console.log(newUrl);
-      $("#qr-appear-here").empty();
+      $("#qr-code").empty();
       new QRCode("qr-code", {
         text: newUrl,
         width: 200,
