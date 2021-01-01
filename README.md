@@ -3,7 +3,8 @@
 ## Purpose
 
 This Repository is used to develop and display a moving box content application that allows the user to name and create a list of contents converted into a printable QR label.  Furthermore, the user can scan the code with their phone's camera app and be taken to a link displaying their box content and search for the nearest charity organizations.
-![imageofsite]()
+
+![imageofsite](./assets/images/whatsinthebox.png)
 
 Link of working product
 https://github.com/pkriengsiri/whats-in-the-box/deployments/activity_log?environment=github-pages
@@ -15,18 +16,24 @@ https://github.com/pkriengsiri/whats-in-the-box
 ````
 
 - Go to https://github.com/pkriengsiri/whats-in-the-box/deployments/activity_log?environment=github-pages
-### Creating and displaying a  QR Label
+  
+Creating and displaying a  QR Label:
+
 - Add your name
 - Name your box
 - List the contents of your box
 - Press the "Generate your QR code" button and "Print" button
 - Place the label on your box
 - Scan the label with your phone, follow the link to view the contents
-Viewing the contents of your box
+  
+Viewing the contents of your box:
+
 -Scan the QR label with your phone or select the "My Boxes" page from the dropdown menu
 -Your box contents are stored via local storage and will only be accessible from that device used to create the QR label.
 -Click the box you would like to see the contents of
-###Finding a Charity
+
+Finding a Charity:
+
 -While viewing the contents of your box, 
 -Press the "Find a local charity near you!" button and search within 10 miles of the zip code of the area you wish to donate to 
 -Press the use my location button to find a local charity within 10 miles of you.
@@ -61,8 +68,11 @@ https://github.com/Marquez-Brown
 
 ## APIs Used
 Paste.ee
-html2pdf.app
+
+html2pdf.com
+
 cors-anywhere.herokuapp.com
+
 orghunter.com
 
 
