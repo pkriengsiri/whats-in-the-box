@@ -117,6 +117,10 @@ body {
     
 }
 
+.list-indent {
+    margin-left: 20px;
+}
+
 #nav-header{
     text-align: center;
 }
