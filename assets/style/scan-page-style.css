@@ -7,5 +7,5 @@ body {
 
 /* ID SELECTORS */
 #zip-error, #geo-unsupported, #geo-error {
-    color: red;
+    color: #A93E35;;
 }
