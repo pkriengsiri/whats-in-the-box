@@ -1,11 +1,11 @@
 /* ELEMENT SELECTORS */
-body {
-    background-image: none;
+/* body {
+    background-image: url(../images/bubble-wrap.png);
     font-family: 'Staatliches', cursive;
     font-size: larger;
-}
+} */
 
 /* ID SELECTORS */
-#zip-error, #geo-unsupported, #geo-error {
+/* #zip-error, #geo-unsupported, #geo-error {
     color: red;
-}
+} */

@@ -117,6 +117,10 @@ body {
 #nav-header{
     text-align: center;
 }
+/* ID SELECTORS  */
+ #zip-error, #geo-unsupported, #geo-error {
+    color: red;
+}
 
 
 /* hides box flaps below 768px */
