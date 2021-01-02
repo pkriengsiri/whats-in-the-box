@@ -106,13 +106,14 @@ body {
 
 .about-us {
     background-color:rgb(192, 143, 79);
-    color: white;
+    border-style: dashed;
 }
 
 .card-custom {
     width: 220px;
     
 }
+
 
 #nav-header{
     text-align: center;
