@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../assets/style/style.css" />
-  <!-- <link rel="stylesheet" href="../assets/style/scan-page-style.css" /> -->
+  <link rel="stylesheet" href="../assets/style/scan-page-style.css" />
 
   <link href="../assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
@@ -33,7 +33,7 @@
   <nav class="navbar navbar-light bg-light">
     <div class="row w-100">
       <div class="col-1">
-        <div class="dropdown">
+        <div class="dropdown d-none">
           <button class="btn btn-secondary dropdown-toggle m-2" type="button" id="dropdownMenuButton"
             data-bs-toggle="dropdown" aria-expanded="false">
             <span><i class="fas fa-bars"></i></span>
@@ -67,9 +67,8 @@
   <!-- CONTENT -->
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="card" style="width: 24rem">
-          <div class="card-body">
+      <div class="col-md-12">        
+          <div class="card-body mx-auto" style="width: 24rem">         
             <h3>User Name:</h3>
             <p id="user-name"></p>
             <h3>Box Name:</h3>
@@ -87,8 +86,7 @@
                 </h4>
               </div>
             </div>
-          </div>
-        </div>
+           </div>       
       </div>
     </div>
     <!-- MODAL-->

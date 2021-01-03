@@ -80,7 +80,7 @@ body {
 }
 
  .generate-button:active, .btn-lg, .generate-button-check:focus, .card-button:active, .card-button-check:focus,
-  #charity-button:active, #charity-button:focus {
+  #charity-button:active, #charity-button:focus, #zip-search:active, #zip-search:focus, #geo-search:active, #geo-search:focus  {
     background-color:#A93E35;
     border-color: #b9534a;
     outline: none !important;
