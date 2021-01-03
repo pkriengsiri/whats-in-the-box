@@ -46,6 +46,7 @@
     <link href="../assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
+    <!-- nav bar -->
     <nav class="navbar navbar-light bg-light">
       <div class="row w-100">
         <div class="col-1">
@@ -76,9 +77,7 @@
                   >About Us</a
                 >
               </li>
-              <li>
-                <a class="dropdown-item" href="../boxlist/index.html">Merch</a>
-              </li>
+           
             </ul>
           </div>
         </div>
@@ -92,6 +91,7 @@
       </div>
     </nav>
 
+    <!-- main content of page -->
     <div class="container">
       <!-- top box flap -->
       <div class="row mt-3 justify-content-md-center">
@@ -106,17 +106,17 @@
         <!-- How to Card in list format -->
         <div class="form col-md6 lg-shadow w-50">
           <div class="text-center">
-            <h2>How to use What's in the box?</h2>
+            <h2>How to use "What's in the box?"</h2>
           </div>
           <div class="card-body">
-            <h3 class="pt-2 mt-2">Creating the QR Label</h3>
+            <h3 class="pt-2 mt-2 how-to-header">Creating the QR Label</h3>
             <ul class="card-text">
               <li>
                 Create your QR code by filling out all of the form's fields.
               </li>
-              <li class="list-indent">
-                Note that the box name is limited to 16 characters.
-              </li>
+              <ul class="list-indent">
+                <small>**Note: The box name is limited to 16 characters.</small>
+              </ul>
               <li>
                 Press the "Generate QR Code" button to generate a QR label that
                 will contain a link to view your box contents
@@ -127,22 +127,22 @@
               </li>
             </ul>
 
-            <h3 class="pt-2 mt-2">My Boxes Page</h3>
+            <h3 class="pt-2 mt-2 how-to-header">My Boxes Page</h3>
             <ul class="card-text">
               <li>
                 The My Boxes page will store all of the boxes you have created
               </li>
-              <li class="list-indent">
-                Note: The list of of boxes will only be available on the device
-                you made the QR code.
-              </li>
+              <ul class="list-indent">
+                <small>**Note: The list of of boxes will only be available on the device
+                you made the QR code.</small>
+              </ul>
               <li>Click on the box you need to find out what's in the box.</li>
               <li>
                 Click on the "Reprint QR Code" button to reprint the QR code pdf label.
               </li>
             </ul>
 
-            <h3 class="pt-2 mt-2">Scanning the QR Code</h3>
+            <h3 class="pt-2 mt-2 how-to-header">Scanning the QR Code</h3>
             <ul class="card-text">
               <li>
                 After scanning a generated QR code on a mobile device, click on
@@ -152,12 +152,14 @@
                 If you have items you need to donate, press the "Find a local
                 charity near you!" button.
               </li>
-              <li class="list-indent">
-                Search for charities by zip code or press the "Use my location"
+              <ul class="list-indent">
+                -Search for charities by zip code or press the "Use my location"
                 button to find a local charity within 10 miles of you.
-              </li>
+              </ul>
             </ul>
-            <a href="../index.html" class="btn card-button">Main Page</a>
+            <div class="text-center">
+            <a href="../index.html" class="btn card-button justify-content-center">Main Page</a>
+            </div>
           </div>
         </div>
 
