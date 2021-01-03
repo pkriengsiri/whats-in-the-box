@@ -33,8 +33,11 @@
       crossorigin="anonymous"
     />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- QRCode JS file -->
     <script src="./assets/script/qrcode.min.js"></script>
@@ -43,98 +46,176 @@
     <link href="./assets/images/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
-
+    <!-- nav bar -->
     <nav class="navbar navbar-light bg-light">
       <div class="row w-100">
         <div class="col-1">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle m-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              class="btn btn-secondary dropdown-toggle m-3"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               <span><i class="fas fa-bars"></i></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <li><a class="dropdown-item" href="../index.html">Home</a></li>
-              <li><a class="dropdown-item" href="#">How to Use "What's in the Box"</a></li>
-              <li><a class="dropdown-item" href="../boxlist/index.html">My Boxes</a></li>
+              <li><a class="dropdown-item" href="../index.html">Home</a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >How to Use "What's in the Box"</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="../boxlist/index.html"
+                  >My Boxes</a
+                >
+              </li>
               <li><a class="dropdown-item" href="index.html">About Us</a></li>
-              <li><a class="dropdown-item" href="./boxlist/index.html">Merch</a></li>
+              <li>
+                <a class="dropdown-item" href="./boxlist/index.html">Merch</a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="col-10">      
-      <div class="mb-0 h1" id="nav-header">What's in the Box? <i class="fas fa-box-open"></i>
-        <h5 class="tag-line mb-0">- A Truly Moving experience -</h5>
+        <div class="col-10">
+          <div class="mb-0 h1" id="nav-header">
+            What's in the Box? <i class="fas fa-box-open"></i>
+            <h5 class="tag-line mb-0">- A Truly Moving experience -</h5>
+          </div>
+        </div>
+        <div class="col-1"></div>
       </div>
-    </div>
-        <div class="col-1">
-    </div>
-  </div>
-    </div>
     </nav>
-        
+    <!-- end of nav bar -->
+
     <main class="container">
-
-        <div class="row justify-content-md-center mt-2">
-            <div class="col-10 about-us">
-                <h1>About Us</h1>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia vitae obcaecati. Mollitia exercitationem repellendus illo veniam excepturi aperiam animi voluptatem fuga minima ipsum debitis doloremque, sint quia fugit dolores?</p>
+      <div class="row d-flex justify-content-md-center mt-2">
+        <div class="col-10 about-us">
+          <h1 class="text-center">
+            Developers that Think Outside the Box
+            <i class="fas fa-people-carry"></i>
+          </h1>
+          <div class="row">
+            <div class="col">
+              <p>
+                "What's in the Box" was created during the Georgia Tech Full
+                Stack Coding Bootcamp. The application was developed only 3
+                weeks into class and we're proud of what we were able to
+                accomplish after learning HTML, CSS, vanilla JS, jQuery, and
+                client-side storage.
+              </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2 justify-content-md-center">
+        <div
+          class="col-3 card card-custom mx-2 mb-3 align-items-center border-light"
+        >
+          <h4>Molly McCollum</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Roswell, Georgia</h6>
+          <p>
+            Hi! I'm a front-end developer and meteorologist. I enjoy creative
+            problem-solving and looking at clouds.
+          </p>
+          <h5 class="card-subtitle mb-2 text-muted">Connect with me:</h5>
+          <div>
+            <a
+              href="https://github.com/mollymccollumwx"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mollymccollumwx/"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
         </div>
 
-        <div class="row">
-            <div class="col-3 d-flex justify-content-center mt-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Name Here</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Location Here</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-github"></i></a>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 d-flex justify-content-center mt-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Name Here</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Location Here</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-github"></i></a>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 d-flex justify-content-center mt-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Name Here</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Location Here</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-github"></i></a>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 d-flex justify-content-center mt-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Name Here</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Location Here</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-github"></i></a>
-                      <a href="#" class="btn-lg card-button btn-primary"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                  </div>
-            </div>
-
+        <div
+          class="col-3 card card-custom mx-2 mb-3 align-items-center border-light"
+        >
+          <h4>Pete Kriengsiri</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Atlanta, Georgia</h6>
+          <p>
+            I'm a full-stack developer with a risk management consulting/
+            engineering background. I like to take things apart and play with
+            dogs in my free time.
+          </p>
+          <h5 class="card-subtitle mb-2 text-muted">Connect with me:</h5>
+          <div>
+            <a
+              href="https://github.com/pkriengsiri"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/petekriengsiri/"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
         </div>
 
+        <div
+          class="col-3 card card-custom mx-2 mb-3 align-items-center border-light"
+        >
+          <h4>Mugi Chultemsuren</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Atlanta, Georgia</h6>
+          <p></p>
+          <h5 class="card-subtitle mb-2 text-muted">Connect with me:</h5>
+          <div>
+            <a
+              href="https://github.com/mollymccollumwx"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mollymccollumwx/"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div
+          class="col-3 card card-custom mx-2 mb-3 align-items-center border-light"
+        >
+          <h4>Marquez Brown</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Atlanta, Georgia</h6>
+          <p>
+            I'm a Full Stack developer based in the Atlanta area currently
+            enrolled in Georgia Tech Full Stack Coding Bootcamp.
+          </p>
+          <h5 class="card-subtitle mb-2 text-muted">Connect with me:</h5>
+          <div>
+            <a
+              href="https://github.com/mollymccollumwx"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mollymccollumwx/"
+              target="_blank"
+              class="btn card-button mb-1"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </main>
-        
-        <script src="" async defer></script>
-    </body>
+
+    <script src="" async defer></script>
+  </body>
 </html>

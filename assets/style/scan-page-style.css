@@ -7,10 +7,6 @@ body {
 } 
 
 /* ID SELECTORS */
-/* #zip-error, #geo-unsupported, #geo-error {
-    color: red;
-} */
-
-
-
-
+#zip-error, #geo-unsupported, #geo-error {
+    color: #A93E35;;
+}
