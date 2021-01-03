@@ -21,7 +21,7 @@ $(document).ready(function () {
       cardTitle.text(userBoxes[i].name);
       boxContents.attr(
         "href",
-        "https://pkriengsiri.github.io/whats-in-the-box/scan/?name=" + paste
+        "../scan/index.html?name=" + paste
       );
     
       
