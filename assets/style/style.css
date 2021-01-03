@@ -5,6 +5,11 @@ body {
     font-size: larger;
 }
 
+small {
+    font-style: italic;
+}
+
+
 .fa-box:hover {
     color: rgb(105, 75, 33);
 }
