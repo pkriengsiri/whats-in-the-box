@@ -127,7 +127,6 @@ body {
     text-align: center;
 }
 
-
 /* hides box flaps below 768px */
 @media screen and (max-width: 768px) {
     .top-flap, .bottom-flap, .left-flap, .right-flap {
