@@ -3,7 +3,13 @@ body {
     background-image: url(../images/bubble-wrap.png);
     font-family: 'Staatliches', cursive;
     font-size: larger;
+    
 }
+
+small {
+    font-style: italic;
+}
+
 
 .fa-box:hover {
     color: rgb(105, 75, 33);
@@ -121,6 +127,10 @@ body {
 
 .list-indent {
     margin-left: 20px;
+}
+
+.how-to-header {
+    color:  #A93E35;
 }
 
 
