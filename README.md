@@ -16,7 +16,7 @@ This Repository is used to develop and display a moving box content application 
 * Google fonts
 
 ### Third-Party APIs
-* Paste.ee - [documentation](https://pastee.github.io/docs/)
+* Paste - [documentation](https://pastee.github.io/docs/)
 * HTML to PDF Conversion API - [documentation](https://html2pdf.app/)
 * cors-anywhere - [documentation](https://github.com/Rob--W/cors-anywhere/#documentation)
 * OrgHunter Charity Search - [documentation](http://charityapi.orghunter.com/charity-api-list)
@@ -33,7 +33,9 @@ The application shown in the usage section below was deployed using GitHub Pages
 Link to the deployed application: https://pkriengsiri.github.io/whats-in-the-box/
 
 ![imageofsite](./assets/images/whatsinthebox.png)
-
+![imageofsite](./assets/images/boxes.png)
+![imageofsite](./assets/images/howto.png)
+![imageofsite](./assets/images/box-contents.jpg)
 ````
 Creating and displaying a  QR Label: 
 
@@ -71,6 +73,19 @@ https://github.com/mugich
 
 ### Marquez Brown
 https://github.com/Marquez-Brown
+
+## Recent Changes
+12-28-2020 Displaying the QR Code
+
+12-28-2020 Scanning the QR Code
+
+12-29-2020 Styling the Main Page
+
+12-29-2020 Displaying List of Boxes
+
+12-31-2020 Created About Us Page
+
+01-01-2021 Added the Charity API
 
 
 ## License
