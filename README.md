@@ -23,19 +23,19 @@ This Repository is used to develop and display a moving box content application 
 * Google Maps - [documentation](https://developers.google.com/maps/documentation/urls/get-started)
 
 ## Installation
-Link to Github Repository
-https://github.com/pkriengsiri/whats-in-the-box
+Link to Github Repository: https://github.com/pkriengsiri/whats-in-the-box
 
 Copy the contents of our repository to the server where it will be deployed.
 
 The application shown in the usage section below was deployed using GitHub Pages.  The repository can be replicated by via fork, clone, and redeployment with GitHub Pages.
 
 ## Usage
-Link to the deployed application
+Link to the deployed application: https://pkriengsiri.github.io/whats-in-the-box/
+
 ![imageofsite](./assets/images/whatsinthebox.png)
 
 ````
-Creating and displaying a  QR Label:
+Creating and displaying a  QR Label: 
 
 - Add your name
 - Name your box
