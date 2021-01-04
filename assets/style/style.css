@@ -170,7 +170,8 @@ small {
   .bottom-flap,
   .left-flap,
   .right-flap {
-    visibility: hidden;
+    display: none;
+    }
   }
 
   .form {
