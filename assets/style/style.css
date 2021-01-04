@@ -1,4 +1,5 @@
 /* background image, google font */
+/* body selectors */
 body {
   background-image: url(../images/bubble-wrap.png);
   font-family: "Staatliches", cursive;
@@ -8,7 +9,7 @@ body {
 small {
   font-style: italic;
 }
-
+/* class selectors */
 .fa-box:hover {
   color: rgb(105, 75, 33);
 }
@@ -148,10 +149,10 @@ small {
   color: #a93e35;
 }
 
+/* ID SELECTORS */
 #nav-header {
   text-align: center;
 }
-/* ID SELECTORS */
 #zip-error,
 #geo-unsupported,
 #geo-error {
@@ -162,6 +163,7 @@ small {
   border-style: solid;
   font-size: x-large;
 }
+/* media query */
 /* hides box flaps below 768px */
 @media screen and (max-width: 768px) {
   .top-flap,
