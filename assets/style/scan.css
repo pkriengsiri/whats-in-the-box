@@ -1,0 +1,9 @@
+/* media query */
+@media screen and (max-width: 768px) {
+  .dropdown {
+    visibility: hidden;
+  }
+  body {
+    background-image: none;
+  }
+}
