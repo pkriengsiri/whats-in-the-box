@@ -1,8 +1,8 @@
 @media screen and (max-width: 768px) {
-    .top-flap, .bottom-flap, .left-flap, .right-flap {
+    .dropdown  {
       visibility: hidden;
     }
-
-    .form {
-        border-style: dashed;
-    }
+body {
+    background-image: none;
+}
+} 
