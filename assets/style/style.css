@@ -137,7 +137,10 @@ small {
 #nav-header{
     text-align: center;
 }
-
+/* ID SELECTORS */
+#zip-error, #geo-unsupported, #geo-error {
+    color: #A93E35;;
+}
 /* hides box flaps below 768px */
 @media screen and (max-width: 768px) {
     .top-flap, .bottom-flap, .left-flap, .right-flap {
