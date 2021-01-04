@@ -149,6 +149,10 @@ small {
   color: #a93e35;
 }
 
+.scan-header {
+  color:  #a93e35;
+}
+
 /* ID SELECTORS */
 #nav-header {
   text-align: center;
@@ -177,4 +181,4 @@ small {
   .form {
     border-style: dashed;
   }
-}
+
