@@ -16,17 +16,30 @@ This Repository is used to develop and display a moving box content application 
 * Google fonts
 
 ### Third-Party APIs
+<<<<<<< HEAD
 * Paste - [documentation](https://pastee.github.io/docs/)
+=======
+* Paste.ee - [documentation](https://pastee.github.io/docs/)
+>>>>>>> 1295c9509df78b6e35d14d450a93f86f70c1d973
 * HTML to PDF Conversion API - [documentation](https://html2pdf.app/)
 * cors-anywhere - [documentation](https://github.com/Rob--W/cors-anywhere/#documentation)
 * OrgHunter Charity Search - [documentation](http://charityapi.orghunter.com/charity-api-list)
 * Google Maps - [documentation](https://developers.google.com/maps/documentation/urls/get-started)
+<<<<<<< HEAD
 
 ## Installation
 Link to Github Repository: https://github.com/pkriengsiri/whats-in-the-box
 
 Copy the contents of our repository to the server where it will be deployed.
 
+=======
+
+## Installation
+Link to Github Repository: https://github.com/pkriengsiri/whats-in-the-box
+
+Copy the contents of our repository to the server where it will be deployed.
+
+>>>>>>> 1295c9509df78b6e35d14d450a93f86f70c1d973
 The application shown in the usage section below was deployed using GitHub Pages.  The repository can be replicated by via fork, clone, and redeployment with GitHub Pages.
 
 ## Usage
@@ -74,6 +87,7 @@ https://github.com/mugich
 ### Marquez Brown
 https://github.com/Marquez-Brown
 
+<<<<<<< HEAD
 ## Recent Changes
 12-28-2020 Displaying the QR Code
 
@@ -88,6 +102,9 @@ https://github.com/Marquez-Brown
 01-01-2021 Added the Charity API
 
 
+=======
+
+>>>>>>> 1295c9509df78b6e35d14d450a93f86f70c1d973
 ## License
 MIT License
 Copyright (c) 2021 Marquez Brown, Molly McCollum, Mugi Chultemsuren, Pete Kriengsiri
