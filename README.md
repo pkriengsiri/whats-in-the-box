@@ -1,23 +1,41 @@
- # What's in the Box?
+# What's in the Box?
+ An application for tracking the context of boxes packed for household moving and storage projects
 
 ## Purpose
 
 This Repository is used to develop and display a moving box content application that allows the user to name and create a list of contents converted into a printable QR label.  Furthermore, the user can scan the code with their phone's camera app and be taken to a link displaying their box content and search for the nearest charity organizations.
 
-![imageofsite](./assets/images/whatsinthebox.png)
+### Technologies
+* HTML
+* JavaScript
+* jQuery
+* qrcode.js jQuery Library
+* CSS
+* Bootrap CSS Framework
+* Font Awesome Icon Toolkit
+* Google fonts
 
-Link of working product
-https://github.com/pkriengsiri/whats-in-the-box/deployments/activity_log?environment=github-pages
+### Third-Party APIs
+* Paste.ee - [documentation](https://pastee.github.io/docs/)
+* HTML to PDF Conversion API - [documentation](https://html2pdf.app/)
+* cors-anywhere - [documentation](https://github.com/Rob--W/cors-anywhere/#documentation)
+* OrgHunter Charity Search - [documentation](http://charityapi.orghunter.com/charity-api-list)
+* Google Maps - [documentation](https://developers.google.com/maps/documentation/urls/get-started)
 
-Link to Github Repository
-https://github.com/pkriengsiri/whats-in-the-box
+## Installation
+Link to Github Repository: https://github.com/pkriengsiri/whats-in-the-box
+
+Copy the contents of our repository to the server where it will be deployed.
+
+The application shown in the usage section below was deployed using GitHub Pages.  The repository can be replicated by via fork, clone, and redeployment with GitHub Pages.
 
 ## Usage
-````
+Link to the deployed application: https://pkriengsiri.github.io/whats-in-the-box/
 
-- Go to https://github.com/pkriengsiri/whats-in-the-box/deployments/activity_log?environment=github-pages
-  
-Creating and displaying a  QR Label:
+![imageofsite](./assets/images/whatsinthebox.png)
+
+````
+Creating and displaying a  QR Label: 
 
 - Add your name
 - Name your box
@@ -38,20 +56,8 @@ Finding a Charity:
 -Press the "Find a local charity near you!" button and search within 10 miles of the zip code of the area you wish to donate to 
 -Press the use my location button to find a local charity within 10 miles of you.
   
-
-
-
 ````
 
-## Recent changes 
-
-
-*12-31-2020 - Added Read.ME
-
-
-## If you would like to contribute
-
-To help add functionality, debugging, or refactoring the code, please ask for a clone of the repo, make the changes, and comments for overview and permission to push.
 
 ## Contributors / Credit
 ### Pete Kriengsiri
@@ -66,20 +72,10 @@ https://github.com/mugich
 ### Marquez Brown
 https://github.com/Marquez-Brown
 
-## APIs Used
-Paste.ee
 
-html2pdf.com
-
-cors-anywhere.herokuapp.com
-
-orghunter.com
-
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+## License
 MIT License
-Copyright (c) [2020] [Georgia Tech Bootcamp Project]
+Copyright (c) 2021 Marquez Brown, Molly McCollum, Mugi Chultemsuren, Pete Kriengsiri
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -98,3 +94,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Badges
+[![GitHub issues](https://img.shields.io/github/issues/pkriengsiri/whats-in-the-box)](https://github.com/pkriengsiri/whats-in-the-box/issues)
+[![GitHub stars](https://img.shields.io/github/stars/pkriengsiri/whats-in-the-box)](https://github.com/pkriengsiri/whats-in-the-box/stargazers)
+[![GitHub license](https://img.shields.io/github/license/pkriengsiri/whats-in-the-box)](https://github.com/pkriengsiri/whats-in-the-box)
+
+
+## Contributions
+
+To help add functionality, debugging, or refactoring the code, please contact one of our team members to request access as a collaborator.
