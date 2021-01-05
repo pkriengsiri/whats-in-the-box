@@ -1,15 +1,15 @@
 # What's in the Box?
- An application for tracking the context of boxes packed for household moving and storage projects
+ An application for tracking the content of boxes packed for household moving and storage projects
 
 ## Purpose
 
-This Repository is used to develop and display a moving box content application that allows the user to name and create a list of contents converted into a printable QR label.  Furthermore, the user can scan the code with their phone's camera app and be taken to a link displaying their box content and search for the nearest charity organizations.
+This repository is used to develop and display a moving box content application that allows the user to name and create a list of contents converted into a printable QR label.  Furthermore, the user can scan the code with their phone's camera app and be taken to a link displaying their box content and search for the nearest charity organizations.
 
 ### Technologies
 * HTML
 * JavaScript
 * jQuery
-* qrcode.js jQuery Library
+* qrcode.js Library
 * CSS
 * Bootrap CSS Framework
 * Font Awesome Icon Toolkit
